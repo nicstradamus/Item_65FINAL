@@ -1,34 +1,34 @@
 from tkinter import *
 from tkinter import ttk
-import shutil
-import os
 from tkinter import filedialog
 from tkinter import messagebox
+import shutil
+import os
 
 import item65C_main
 import item65C_gui
 
 
 
-def get_src(src_files,dest_path,count,frame):
+def get_src(count):
     src_files = filedialog.askopenfilenames()
     count = int(0)
     for i in src_files:
         count += 1
-    lbl_count = ttk.Label(frame, text= 'Files selected: {}'.format(str(count))).pack()
-    print(src_files)
-    print(count)
+    return src_files,count
 
     
-
-def get_dest(src_files,dest_path,count,frame):
+def get_dest(dest_path):
     dest_path = filedialog.askdirectory()
-    lbl_dest = ttk.Label(frame, text='Destination folder: {}'.format(dest_path)).pack()
+    return dest_path
 
     
 
-def move_files(src_files,dest_path,count,frame):
-    if count > 1 and len(dest_path) != '':
+def move_files(src_files,dest_path,count):
+    print(count)
+    print(src_files)
+    print(dest_path)
+    if (count) > 1 and (dest_path) != '???':
         shutil.move(src_files,dest_path)
     else:
         messagebox.showinfo(title='Alert', message = 'You must first select files and a destination path.')

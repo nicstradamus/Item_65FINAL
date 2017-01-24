@@ -1,10 +1,7 @@
-
 from tkinter import *
 from tkinter import ttk
-##import shutil
-##import os
-##from tkinter import filedialog
-##from tkinter import messagebox
+import shutil
+import os
 
 import item65C_func
 import item65C_gui
@@ -28,7 +25,7 @@ class start(Frame):
 
     
         
-
-root = Tk()
-my_gui = start(root)
-root.mainloop()
+if __name__ == "__main__":
+    root = Tk()
+    my_gui = start(root)
+    root.mainloop()
