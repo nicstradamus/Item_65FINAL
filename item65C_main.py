@@ -13,8 +13,8 @@ class start(Frame):
         Frame.__init__(self, master, *args, **kwargs)
         self.master = master
         master.title("File Transfer")
-        self.master.minsize(300,180) #(Height, Width)
-        self.master.maxsize(300,180)
+        self.master.minsize(300,250) #(Height, Width)
+        self.master.maxsize(300,250)
 
 ##        src_files = ''
 ##        dest_path = ''
